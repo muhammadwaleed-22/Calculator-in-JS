@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+
+<div class="min-h-screen flex items-center justify-center p-4 font-sans">
+  <div class="w-full max-w-xs bg-black text-white p-4">
+    
+    <div class="flex bg-black flex-col items-end justify-end mb-8 min-h-[160px] pr-2">
+      <div id="result" class="text-gray-100 text-5xl font-light tracking-tight min-h-[60px] overflow-hidden"></div>
+      <div id="result-screen" class="text-gray-400 text-2xl mt-4 min-h-[32px]"></div>
+    </div>
+
+    <div class="grid grid-cols-4 gap-3">
+      <button class="bg-zinc-800 hover:bg-zinc-700 h-16 w-16 rounded-full text-xl font-normal transition flex items-center justify-center" onclick="clearscr()">AC</button>
+      <button class="bg-zinc-800 hover:bg-zinc-700 h-16 w-16 rounded-full text-xl font-normal transition flex items-center justify-center" onclick="addBracket()">( )</button>
+      <button class="bg-zinc-800 hover:bg-zinc-700 h-16 w-16 rounded-full text-xl font-normal transition flex items-center justify-center" onclick="addToResult('%')">%</button>
+      <button class="bg-zinc-900 hover:bg-zinc-800 h-16 w-16 rounded-full text-3xl font-light text-blue-400 transition flex items-center justify-center" onclick="addToResult('/')">÷</button>
+
+      <button class="bg-zinc-900/50 hover:bg-zinc-800 h-16 w-16 rounded-full text-2xl font-normal transition flex items-center justify-center" onclick="addToResult('7')">7</button>
+      <button class="bg-zinc-900/50 hover:bg-zinc-800 h-16 w-16 rounded-full text-2xl font-normal transition flex items-center justify-center" onclick="addToResult('8')">8</button>
+      <button class="bg-zinc-900/50 hover:bg-zinc-800 h-16 w-16 rounded-full text-2xl font-normal transition flex items-center justify-center" onclick="addToResult('9')">9</button>
+      <button class="bg-zinc-900 hover:bg-zinc-800 h-16 w-16 rounded-full text-3xl font-light text-blue-400 transition flex items-center justify-center" onclick="addToResult('*')">x</button>
+
+      <button class="bg-zinc-900/50 hover:bg-zinc-800 h-16 w-16 rounded-full text-2xl font-normal transition flex items-center justify-center" onclick="addToResult('4')">4</button>
+      <button class="bg-zinc-900/50 hover:bg-zinc-800 h-16 w-16 rounded-full text-2xl font-normal transition flex items-center justify-center" onclick="addToResult('5')">5</button>
+      <button class="bg-zinc-900/50 hover:bg-zinc-800 h-16 w-16 rounded-full text-2xl font-normal transition flex items-center justify-center" onclick="addToResult('6')">6</button>
+        <button class="bg-zinc-900 hover:bg-zinc-800 h-16 w-16 rounded-full text-3xl font-light text-blue-400 transition flex items-center justify-center" onclick="addToResult('-')">-</button>
+
+      <button class="bg-zinc-900/50 hover:bg-zinc-800 h-16 w-16 rounded-full text-2xl font-normal transition flex items-center justify-center" onclick="addToResult('1')">1</button>
+      <button class="bg-zinc-900/50 hover:bg-zinc-800 h-16 w-16 rounded-full text-2xl font-normal transition flex items-center justify-center" onclick="addToResult('2')">2</button>
+      <button class="bg-zinc-900/50 hover:bg-zinc-800 h-16 w-16 rounded-full text-2xl font-normal transition flex items-center justify-center" onclick="addToResult('3')">3</button>
+      <button class="bg-zinc-900 hover:bg-zinc-800 h-16 w-16 rounded-full text-3xl font-light text-blue-400 transition flex items-center justify-center" onclick="addToResult('+')">+</button>
+
+      <button class="bg-zinc-900/50 hover:bg-zinc-800 h-16 w-16 rounded-full text-2xl font-normal transition flex items-center justify-center" onclick="addToResult('0')">0</button>
+      <button class="bg-zinc-900/50 hover:bg-zinc-800 h-16 w-16 rounded-full text-2xl font-normal transition flex items-center justify-center" onclick="addToResult('.')">.</button>
+      <button class="bg-zinc-900/50 hover:bg-zinc-800 h-16 w-16 rounded-full text-2xl font-normal transition flex items-center justify-center" onclick="backspace()">⌫</button>
+      <button class="bg-white hover:bg-gray-200 h-16 w-16 rounded-full text-3xl font-light text-black transition flex items-center justify-center" onclick="addToResult('=')">=</button>
+
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
